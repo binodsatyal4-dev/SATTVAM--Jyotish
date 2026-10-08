@@ -1,1 +1,58 @@
+/* SATTVAM Jyotish - China Form */
 
+.china-section {
+  padding: 70px 20px;
+  background: #f8f5ec;
+}
+
+.china-form {
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 28px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.china-form label {
+  display: block;
+  margin: 15px 0 7px;
+  font-weight: 700;
+}
+
+.china-form input,
+.china-form select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.china-button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #1f5a3d;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.china-result {
+  display: none;
+  margin-top: 25px;
+  padding: 20px;
+  background: #f8f5ec;
+  border-radius: 12px;
+  line-height: 1.7;
+}
+
+.china-result h3 {
+  margin-top: 0;
+}
