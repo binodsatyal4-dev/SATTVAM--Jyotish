@@ -26,7 +26,44 @@
     <a href="#contact">सम्पर्क</a>
   </nav>
 </header>
+<section id="china" class="china-section">
+  <div class="section-head">
+    <p class="kicker">SATTVAM JYOTISH</p>
+    <h2>📜 आफ्नो चिना बनाउनुहोस्</h2>
+    <p>जन्म विवरण भरेर आफ्नो जन्मकुण्डली तयार गर्नुहोस्।</p>
+  </div>
 
+  <div class="china-form">
+    <label>नाम</label>
+    <input type="text" id="chinaName" placeholder="आफ्नो नाम लेख्नुहोस्">
+
+    <label>जन्म मिति</label>
+    <input type="date" id="chinaDate">
+
+    <label>जन्म समय</label>
+    <input type="time" id="chinaTime">
+
+    <label>जन्म देश</label>
+    <select id="chinaCountry">
+      <option value="">देश छान्नुहोस्</option>
+      <option value="Nepal">नेपाल</option>
+      <option value="India">भारत</option>
+      <option value="USA">अमेरिका</option>
+      <option value="UK">बेलायत</option>
+      <option value="Australia">अष्ट्रेलिया</option>
+      <option value="Other">अन्य</option>
+    </select>
+
+    <label>जन्म स्थान</label>
+    <input type="text" id="chinaPlace" placeholder="शहर / जिल्ला / जन्मस्थान">
+
+    <button type="button" class="china-button" onclick="makeChina()">
+      📜 चिना बनाउनुहोस्
+    </button>
+
+    <div id="chinaResult" class="china-result"></div>
+  </div>
+</section>
 <main id="home">
 <section class="hero">
   <div class="hero-bg"></div>
@@ -110,6 +147,37 @@
   <div class="footer-links"><a href="#about">परिचय</a><a href="#services">सेवाहरू</a><a href="#contact">सम्पर्क</a></div>
   <p class="copyright">© 2026 SATTVAM Jyotish. All rights reserved.</p>
 </footer>
+  <script>
+function makeChina() {
+  const name = document.getElementById("chinaName").value;
+  const date = document.getElementById("chinaDate").value;
+  const time = document.getElementById("chinaTime").value;
+  const country = document.getElementById("chinaCountry").value;
+  const place = document.getElementById("chinaPlace").value;
+  const result = document.getElementById("chinaResult");
+
+  if (!name || !date || !time || !country || !place) {
+    alert("कृपया सबै जन्म विवरण भर्नुहोस्।");
+    return;
+  }
+
+  result.style.display = "block";
+
+  result.innerHTML = `
+    <h3>📜 जन्म विवरण प्राप्त भयो</h3>
+    <p><strong>नाम:</strong> ${name}</p>
+    <p><strong>जन्म मिति:</strong> ${date}</p>
+    <p><strong>जन्म समय:</strong> ${time}</p>
+    <p><strong>जन्म देश:</strong> ${country}</p>
+    <p><strong>जन्म स्थान:</strong> ${place}</p>
+
+    <hr>
+
+    <p>🪐 <strong>कुण्डली गणना अर्को चरणमा जोडिनेछ।</strong></p>
+    <p>लग्न, राशि, नक्षत्र, ग्रहस्थिति, भाव, दशा–अन्तरदशा र AI फलादेश यसै प्रणालीमा थपिनेछ।</p>
+  `;
+}
+</script>
 <script src="script.js"></script>
 </body>
 </html>
